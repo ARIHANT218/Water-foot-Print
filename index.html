@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Footprint Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Water Footprint Calculator</h1>
+    </header>
+
+    <div class="container">
+        <!-- Avatar Section -->
+        <div id="avatar">
+            <img src="https://th.bing.com/th/id/OIP.EwG6x9w6RngqsKrPJYxULAHaHa?w=213&h=212&c=7&r=0&o=5&pid=1.7" alt="Guide Avatar">
+            <p id="avatar-message">Hi! I'm your guide. Enter an item name to calculate its water footprint, or scan it using your camera.</p>
+        </div>
+
+        <!-- Input Form -->
+        <div id="calculator">
+            <input type="text" id="item-input" placeholder="Enter item name...">
+            <button onclick="calculateFootprint()">Calculate</button>
+        </div>
+
+        <!-- Scanner Section -->
+        <div id="scanner">
+            <p>Or scan the item:</p>
+            <input type="file" id="image-upload" accept="image/*" onchange="scanObject()">
+            <div id="scan-result"></div>
+
+            <h2>Or provide an image URL:</h2>
+            <input type="url" id="image-url" placeholder="Enter image URL">
+            <button onclick="scanImageUrl()">Scan URL</button>
+            </div>
+
+        <!-- Display Result -->
+        <div id="result">
+            <h3>Water Footprint Result:</h3>
+            <p id="footprint-result">Please enter an item or scan an object.</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
